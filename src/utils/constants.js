@@ -45,7 +45,15 @@ export const services = [
   },
 ]
 
-export const products_url = 'https://serv-react-api.netlify.app/api/3-z-complete'
+//export const products_url = 'https://serv-react-api.netlify.app/api/3-z-complete'
 
-export const single_product_url = `https://serv-react-api.netlify.app/api/3-z-complete?id=`
+//export const single_product_url = `https://serv-react-api.netlify.app/api/3-z-complete?id=`
+
+
+
+
+export const products_url = 'https://api-cars-auta.netlify.app/api/4-z-complete'
+
+export const single_product_url = `https://api-cars-auta.netlify.app/api/4-z-complete?id=`
+
 

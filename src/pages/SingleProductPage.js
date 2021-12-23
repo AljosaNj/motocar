@@ -3,6 +3,10 @@ import {useParams,useHistory} from 'react-router-dom'
 import {useProductsContext} from '../context/products_context'
 import { single_product_url as url } from '../utils/constants'
 import {formatPrice} from '../utils/helpers'
+import {FaRoad,FaRegCalendarAlt,FaGasPump} from 'react-icons/fa'
+import {ImPower} from 'react-icons/im'
+import {GiGearStickPattern} from 'react-icons/gi'
+import {IoCarSportSharp} from 'react-icons/io5'
 import {
  Loading,
  Error,
@@ -25,6 +29,7 @@ const SingleProductPage = () => {
 
 useEffect(() => {
  fetchSingleProduct(`${url}${id}`)
+ // eslint-disable-next-line
 },[id])
 
 useEffect(() => {
@@ -33,6 +38,7 @@ useEffect(() => {
 history.push('/')
   },3000)
  }
+  // eslint-disable-next-line
 },[error])
 
 
@@ -46,10 +52,11 @@ const {
  name,
  price,
  description,
- stock,
- stars,
- reviews,
- id:sku,
+ km,
+ power,
+ fuel,
+ gear,
+ years,
  company,
  images
 } = product
@@ -60,23 +67,44 @@ const {
   <Link to='/products' className='btn'>
      back to products
    </Link>
- <div className='products-center'>
+ <div className='product-center'>
 <ProductImages images={images}/>
 <section className='content'>
 <h2>{name}</h2>
 <Stars/>
 <h5 className='price'>{formatPrice(price)}</h5>
 <p className='desc'>{description}</p>
+<hr/>
 <p className="info">
-  <span>Available :</span>
-  {stock > 0 ? 'In stock ' : 'out of stock'}
+  <span><FaRoad className='road'/></span>
+   {km}km
+ 
 </p>
+<hr/>
+
+
 <p className="info">
-  <span>SKU:</span>
-  {sku}
+  <span><FaRegCalendarAlt className='road' /></span>
+  {years}
 </p>
+<hr/>
 <p className="info">
-  <span>Brand :</span>
+  <span><ImPower className='road'/></span>
+ {power}kW
+</p>
+<hr/>
+<p className="info">
+  <span><FaGasPump className='road'/></span>
+ {fuel}
+</p>
+<hr/>
+<p className="info">
+  <span><GiGearStickPattern className='road'/></span>
+ {gear}
+</p>
+<hr/>
+<p className="info">
+  <span><IoCarSportSharp className='road' /></span>
  {company}
 </p>
 <hr/>
@@ -110,7 +138,10 @@ const Wrapper = styled.main`
       font-weight: 700;
     }
   }
-
+.road{
+margin-top: 0.3rem;
+color: var(--clr-primary-5);
+}
   @media (min-width: 992px) {
     .product-center {
       grid-template-columns: 1fr 1fr;
