@@ -4,10 +4,141 @@ import { useFilterContext } from '../context/filter_context'
 import {getUniqueValues,formatPrice} from '../utils/helpers'
 import {FaCheck} from 'react-icons/fa'
 const Filters = () => {
+  const {
+    filters : {
+      text,
+      company,
+      category,
+      color,
+      min_price,
+      max_price,
+      price,
+      registration,
+    },
+    updateFilters,
+    clearFilters,
+    all_products,
+  } = useFilterContext()
+
+const categories = getUniqueValues(all_products,'category')
+const companies = getUniqueValues(all_products,'company')
+const colors = getUniqueValues(all_products,'colors')
+
+
  return (
-  <div>
-   filters
+  <Wrapper>
+   <div className="content">
+   <form onSubmit={(e)=>e.preventDefault()}>
+     {/*search input */}
+     <div className='form-control'>
+       <input
+       type='text'
+       name='text'
+       placeholder='search'
+       className='search-input'
+       value={text}
+       onChange={updateFilters}
+       />
+   </div>
+   {/*end search input */}
+   {/*company */}
+   <div className='form-control'>
+      <h5>company</h5>
+      <div>
+        {companies.map((c,index) => {
+          return <button key={index}
+          onClick={updateFilters}
+          type='button'
+          name='company'
+          className={`${
+            company === c.toLowerCase() ? 'active' : null
+          }`}
+          
+          >{c}</button>
+        })}
+      </div>
+   </div>
+   {/*end of company*/}
+   {/*category */}
+  <div className='form-control'>
+    <h5>category</h5>
+  <select 
+  name='category'
+   value={category}
+   onChange={updateFilters}
+   className='category' >
+ {categories.map((c,index)=> {
+return <option key={index} value={c}>{c}</option>
+ })}
+   </select>
   </div>
+
+   {/*end of category */}
+   {/*colors */}
+   <div className='form-control'>
+   <h5>colors</h5>
+   <div className='colors'>
+     {
+       colors.map((c,index)=> {
+         if(c === 'all'){
+           return (
+              <button
+              key={index}
+               name='color'
+          onClick={updateFilters}
+          data-color='all'
+          className={`${
+            color === 'all' ? 'all-btn active' :
+            'all-btn'
+          }`}
+          >all</button>
+           )
+         }
+         return (
+         <button key={index} name="color"
+         style={{background:c}} className={`${color === c? 
+        'color-btn active' : 'color-btn'}`}
+         data-color={c}
+         onClick={updateFilters}
+         >
+           {color === c ? <FaCheck/> : null}
+         </button>
+         )
+       })
+     }
+
+   </div>
+   </div>
+   {/*end of colors */}
+   {/*price */}
+   <div className='form-control'>
+     <h5>price</h5>
+     <p className='price'>{formatPrice(price)}</p>
+     <input type="range" name='price' 
+     onChange={updateFilters} 
+     min={min_price} 
+     max={max_price}
+     value={price}
+     />
+   </div>
+   {/*end of price */}
+   {/*shipping */}
+ <div className='form-control registration'>
+ <label htmlFor='registration'>registration</label>
+ <input type='checkbox' name='registration'
+ id='registration'
+ onChange={updateFilters} checked={registration}
+ />
+</div>
+
+   {/* end ofshipping */}
+   </form>
+   <button type='button' className='clear-btn'
+    onClick={clearFilters}>
+      {''}
+      clear filters</button>
+   </div>
+  </Wrapper>
  )
 }
 
@@ -44,7 +175,7 @@ const Wrapper = styled.section`
   .active {
     border-color: var(--clr-grey-5);
   }
-  .company {
+  .category  {
     background: var(--clr-grey-10);
     border-radius: var(--radius);
     border-color: transparent;
@@ -88,7 +219,7 @@ const Wrapper = styled.section`
   .price {
     margin-bottom: 0.25rem;
   }
-  .shipping {
+  .registration {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
