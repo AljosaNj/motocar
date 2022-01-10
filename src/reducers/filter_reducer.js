@@ -21,6 +21,8 @@ if(action.type === LOAD_PRODUCTS){
 
 }
 }
+
+
 if (action.type === SET_GRIDVIEW){
   return {...state,grid_view: true}
 }
@@ -65,7 +67,7 @@ if(action.type === UPDATE_FILTERS){
 }
 if(action.type === FILTER_PRODUCTS){
   const {all_products} = state
-const {text,category,company,color,price,registration} = state.filters
+const {text,category,company,gear,fuel,years,color,price,registration} = state.filters
 
 
   let tempProducts = [...all_products]
@@ -85,6 +87,19 @@ if(company !=='all'){
 if(category !=='all'){
   tempProducts = tempProducts.filter((product) => product.category === category)
 }
+//gear
+if(gear !=='all'){
+  tempProducts = tempProducts.filter((product) => product.gear === gear)
+}
+ //fuel
+if(fuel !=='all'){
+  tempProducts = tempProducts.filter((product) => product.fuel === fuel)
+}
+
+//years
+if(years !=='all'){
+  tempProducts = tempProducts.filter((product) => product.years === years)
+}
 // colors
 if(color !== 'all'){
   tempProducts = tempProducts.filter((product) => {
@@ -93,6 +108,9 @@ if(color !== 'all'){
 }
 //price
 tempProducts = tempProducts.filter((product)=> product.price <= price)
+
+
+
 //registration
 if(registration){
   tempProducts = tempProducts.filter((product) => product.registration
@@ -109,12 +127,11 @@ if(action.type === CLEAR_FILTERS){
   text:'',
   company:'all',
   category:'all',
-  //gear:'all',
-  //fuel:'all',
-  //years:'all',
+  gear:'all',
+  fuel:'all',
+  years:'all',
   color:'all',
-  //min_km:0,
-  //max_km:0,
+ 
   price:state.filters.max_price,
   registration:false,
  },

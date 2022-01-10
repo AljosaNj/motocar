@@ -9,11 +9,15 @@ const Filters = () => {
       text,
       company,
       category,
+      gear,
+      fuel,
+      years,
       color,
       min_price,
       max_price,
       price,
       registration,
+     
     },
     updateFilters,
     clearFilters,
@@ -23,6 +27,9 @@ const Filters = () => {
 const categories = getUniqueValues(all_products,'category')
 const companies = getUniqueValues(all_products,'company')
 const colors = getUniqueValues(all_products,'colors')
+const gears = getUniqueValues(all_products,'gear')
+const fuels = getUniqueValues(all_products,'fuel')
+const allyears = getUniqueValues(all_products,'years')
 
 
  return (
@@ -74,6 +81,55 @@ return <option key={index} value={c}>{c}</option>
   </div>
 
    {/*end of category */}
+ {/*gear */}
+  <div className='form-control'>
+    <h5>gear</h5>
+  <select 
+  name='gear'
+   value={gear}
+   onChange={updateFilters}
+   className='gear' >
+   {gears.map((c,index) => {
+     return <option key={index} value={c}>{c}</option>
+   })}
+   </select>
+  </div>
+
+   {/*end of gear*/}
+   {/*fuel */}
+  <div className='form-control'>
+    <h5>fuel</h5>
+  <select 
+  name='fuel'
+   value={fuel}
+   onChange={updateFilters}
+   className='fuel' >
+ {fuels.map((c,index)=> {
+return <option key={index} value={c}>{c}</option>
+ })}
+   </select>
+  </div>
+
+   {/*end of fuel*/}
+{/*years */}
+  <div className='form-control'>
+    <h5>years</h5>
+  <select 
+  name='years'
+   value={years}
+   onChange={updateFilters}
+   className='years' >
+ {allyears.map((c,index)=> {
+return <option key={index} value={c}>{c}</option>
+ })}
+   </select>
+  </div>
+
+   {/*end of years*/}
+
+  
+
+
    {/*colors */}
    <div className='form-control'>
    <h5>colors</h5>
@@ -110,6 +166,12 @@ return <option key={index} value={c}>{c}</option>
    </div>
    </div>
    {/*end of colors */}
+
+
+
+  
+
+
    {/*price */}
    <div className='form-control'>
      <h5>price</h5>
@@ -122,7 +184,7 @@ return <option key={index} value={c}>{c}</option>
      />
    </div>
    {/*end of price */}
-   {/*shipping */}
+   {/*regist*/}
  <div className='form-control registration'>
  <label htmlFor='registration'>registration</label>
  <input type='checkbox' name='registration'
@@ -131,7 +193,7 @@ return <option key={index} value={c}>{c}</option>
  />
 </div>
 
-   {/* end ofshipping */}
+   {/* end of regist */}
    </form>
    <button type='button' className='clear-btn'
     onClick={clearFilters}>
@@ -175,7 +237,25 @@ const Wrapper = styled.section`
   .active {
     border-color: var(--clr-grey-5);
   }
-  .category  {
+  .category {
+    background: var(--clr-grey-10);
+    border-radius: var(--radius);
+    border-color: transparent;
+    padding: 0.25rem;
+  }
+  .gear{
+     background: var(--clr-grey-10);
+    border-radius: var(--radius);
+    border-color: transparent;
+    padding: 0.25rem;
+  }
+.fuel {
+    background: var(--clr-grey-10);
+    border-radius: var(--radius);
+    border-color: transparent;
+    padding: 0.25rem;
+  }
+.years {
     background: var(--clr-grey-10);
     border-radius: var(--radius);
     border-color: transparent;
@@ -189,8 +269,8 @@ const Wrapper = styled.section`
     display: inline-block;
     width: 1rem;
     height: 1rem;
-    border-radius: 50%;
-    background: #222;
+    //border-radius: 50%;
+   // background: #222;
     margin-right: 0.5rem;
     border: none;
     cursor: pointer;
@@ -200,7 +280,8 @@ const Wrapper = styled.section`
     justify-content: center;
     svg {
       font-size: 0.5rem;
-      color: var(--clr-white);
+     // color: var(--clr-white);
+     color: var(--clr-green-dark)
     }
   }
   .all-btn {
@@ -217,6 +298,9 @@ const Wrapper = styled.section`
     text-decoration: underline;
   }
   .price {
+    margin-bottom: 0.25rem;
+  }
+  .kilometre {
     margin-bottom: 0.25rem;
   }
   .registration {

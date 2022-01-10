@@ -52,7 +52,7 @@ const {
  name,
  price,
  description,
- km,
+ kilometre,
  power,
  fuel,
  gear,
@@ -77,7 +77,7 @@ const {
 <hr/>
 <p className="info">
   <span><FaRoad className='road'/></span>
-   {km}km
+   {kilometre}km
  
 </p>
 <hr/>

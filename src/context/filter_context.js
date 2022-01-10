@@ -28,9 +28,8 @@ const initialState = {
   color:'all',
   min_price:0,
   max_price:0,
-  min_km:0,
-  max_km:0,
   price:0,
+
   registration:false,
  }
 }
@@ -74,9 +73,13 @@ const updateFilters = (e) => {
  if(name === 'price'){
   value = Number(value)
  }
+
  if(name === 'registration'){
   value = e.target.checked
  }
+ 
+
+ 
  dispatch({type:UPDATE_FILTERS,payload:{name,value}})
 }
 const clearFilters = () => {
