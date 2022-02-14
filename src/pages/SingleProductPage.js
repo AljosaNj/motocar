@@ -11,7 +11,6 @@ import {
  Loading,
  Error,
  ProductImages,
- Stars,
  PageHero,
 } from '../components'
 import styled from 'styled-components'
@@ -71,7 +70,7 @@ const {
 <ProductImages images={images}/>
 <section className='content'>
 <h2>{name}</h2>
-<Stars/>
+
 <h5 className='price'>{formatPrice(price)}</h5>
 <p className='desc'>{description}</p>
 <hr/>

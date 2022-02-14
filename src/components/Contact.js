@@ -54,6 +54,7 @@ rows="10"
 }
 
 const Wrapper = styled.section`
+
    padding: 5rem 0;
  h5 {
     text-transform: none;
@@ -122,10 +123,11 @@ justify-content: center;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 0px 0px 20px #00000010;
+  //box-shadow: 0px 0px 20px #00000010;
   background-color: white;
   border-radius: 8px;
   margin-bottom: 20px;
+  
 }
 .form-group {
   width: 100%;

@@ -36,7 +36,7 @@ img {
 .gallery {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(5, 1fr);
   column-gap: 1rem;
   img {
     height: 100px;
@@ -45,6 +45,7 @@ img {
 }
 .active {
   border: 2px solid var(--clr-primary-5)
+  //box-shadow: 0px 0px 0px 2px var(--clr-primary-5);
 }
 @media (max-width:576px){
 .main {

@@ -6,7 +6,7 @@ const InfoButtons = () => {
  return (
   <Wrapper >
    <ul className='soc-links'>
-    <h5>+23994892929</h5>
+    
     <li><a href='https://www.facebook.com/' target="blank"  ><FaPhoneAlt/></a></li> 
       <li >  <a href='https://www.facebook.com/' target="blank"><FaFacebook /></a></li>
       <li> <a href='https://www.instagram.com/'target="blank" ><FaInstagram/></a></li>
@@ -28,7 +28,7 @@ const Wrapper = styled.footer`
   justify-content: center;
   align-items: center;
  //background: var(--clr-white);
-  background: var(--clr-primary-11);
+  //background: var(--clr-primary-11);
   text-align: center;
   span {
     color: var(--clr-primary-5);
@@ -52,8 +52,8 @@ const Wrapper = styled.footer`
       margin:  0 0.5rem;
     }
     a{
-      color: var(--clr-primary-6);
-        //color: var(--clr-grey-3);
+      //color: var(--clr-primary-6);
+        color: var(--clr-black);
         font-size: 1rem;
         text-transform: capitalize;
         letter-spacing: var(--spacing);

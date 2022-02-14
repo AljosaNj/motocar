@@ -213,7 +213,8 @@ const Wrapper = styled.section`
   }
   .search-input {
     padding: 0.5rem;
-    background: var(--clr-grey-10);
+    background: var(--clr-primary-8);
+    //background: var(--clr-grey-10);
     border-radius: var(--radius);
     border-color: transparent;
     letter-spacing: var(--spacing);
@@ -231,32 +232,37 @@ const Wrapper = styled.section`
     border: none;
     border-bottom: 1px solid transparent;
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-5);
+    //color: var(--clr-grey-5);
+    color: var(--clr-primary-3);
     cursor: pointer;
   }
   .active {
     border-color: var(--clr-grey-5);
   }
   .category {
-    background: var(--clr-grey-10);
+    background: var(--clr-primary-8);
+    //background: var(--clr-grey-10);
     border-radius: var(--radius);
     border-color: transparent;
     padding: 0.25rem;
   }
   .gear{
-     background: var(--clr-grey-10);
+    background: var(--clr-primary-8);
+    // background: var(--clr-grey-10);
     border-radius: var(--radius);
     border-color: transparent;
     padding: 0.25rem;
   }
 .fuel {
-    background: var(--clr-grey-10);
+  background: var(--clr-primary-8);
+    //background: var(--clr-grey-10);
     border-radius: var(--radius);
     border-color: transparent;
     padding: 0.25rem;
   }
 .years {
-    background: var(--clr-grey-10);
+  background: var(--clr-primary-8);
+    //background: var(--clr-grey-10);
     border-radius: var(--radius);
     border-color: transparent;
     padding: 0.25rem;

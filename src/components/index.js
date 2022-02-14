@@ -13,7 +13,8 @@ import ProductList from './ProductList'
 import Sort from './Sort'
 import Stars from './Stars'
 import PageHero from './PageHero'
-
+import AbCon from './AbCon'
+import MapLoc from './MapLoc'
 
 
 export {
@@ -32,6 +33,8 @@ export {
  Sort,
  Stars,
  PageHero,
+ AbCon,
+ MapLoc,
 
 
 

@@ -2,6 +2,9 @@ import React from "react";
 import { GiShakingHands } from 'react-icons/gi'
 import {CgMail} from 'react-icons/cg'
 import {FaCarSide} from 'react-icons/fa'
+import {FaRegAddressBook} from 'react-icons/fa'
+import {BiTimeFive} from 'react-icons/bi'
+import {BsFillTelephoneFill} from 'react-icons/bs'
 export const links = [
   {
     id: 1,
@@ -44,6 +47,31 @@ export const services = [
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
   },
 ]
+export const aboutcontact = [
+  {
+    id: 1,
+    icon: <FaRegAddressBook/>,
+    title: 'Address',
+    text:
+      'Green Street 22',
+  },
+  {
+    id: 2,
+    icon: <BiTimeFive/>,
+    title: 'work time',
+    text:
+      'Monday-Saturday: 08:00-18:00',
+  },
+  {
+    id: 3,
+    icon: <BsFillTelephoneFill/>,
+    title: 'Contact number',
+    text:
+      '+384 06657383929   +382 052 345 543',
+  },
+]
+
+
 
 //export const products_url = 'https://serv-react-api.netlify.app/api/3-z-complete'
 
