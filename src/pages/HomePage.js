@@ -7,9 +7,11 @@ const HomePage = () => {
   <Hero/>
   
   <FeaturedProducts/>
-  <AbCon/>
-  
+
    <Services/>
+  <AbCon/>
+ 
+  
    
   
   </main>

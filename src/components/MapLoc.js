@@ -20,22 +20,27 @@ initialCenter={{ lat: 44.781786, lng: 17.206285 }}
 
 };
 const mapStyles = {
-  width: '70%',
-  height: '50%',
+ width: '70%',
+ height: '40%',
+ 
 };
 const Wrapper = styled.section`
+
+
 width: 100%;
 height: 100%;
 padding: 5rem 0;
-margin-top: -1rem;
-margin-bottom: 10rem;
-margin-left: 4rem;
+margin-top: -4rem;
+margin-bottom: 7rem;
+margin-left: 7rem;
+
 .services-center {
-    margin-top: 1rem;
-    display: grid;
-    gap: 2.5rem;
+   margin-top: 1rem;
+   display: grid;
+  gap: 2.5rem;
 
   }
+
 
    //.map-center {
    //text-align: center;

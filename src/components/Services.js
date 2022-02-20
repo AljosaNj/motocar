@@ -36,7 +36,7 @@ h4 {
 padding: 5rem 0;
 //background: var(--clr-primary-10);
 //background: var(--clr-black);
-background: var(--clr-white);
+//background: var(--clr-white);
 margin-top: -3rem;
 margin-bottom: 6rem;
 .header h3 {
@@ -57,7 +57,7 @@ margin-bottom: 6rem;
   }
 .service {
  
- //background: var(--clr-primary-11);
+ background: var(--clr-primary-11);
    text-align: center;
     padding: 2.5rem 2rem;
     border-radius: var(--radius);

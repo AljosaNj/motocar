@@ -26,11 +26,12 @@ const AbCon = () => {
 
 const Wrapper = styled.section`
 padding: 5rem 0;
-background: var(--clr-primary-11);
+//background: var(--clr-primary-11);
 //margin-top: -3rem;
 //margin-bottom: 6rem;
 h4 {
-  color: var(--clr-primary-7);
+  //color: var(--clr-primary-7);
+  color: var(--clr-black);
 }
 .p {
   margin-bottom: 0;
@@ -56,6 +57,7 @@ h4 {
 }
 p {
   color: var(--clr-primary-2);
+  //color: var(--clr-black);
 }
 span {
    width: 4rem;
