@@ -1,10 +1,10 @@
 import React from "react";
 import { GiShakingHands } from 'react-icons/gi'
-import {CgMail} from 'react-icons/cg'
-import {FaCarSide} from 'react-icons/fa'
-import {FaRegAddressBook} from 'react-icons/fa'
-import {BiTimeFive} from 'react-icons/bi'
-import {BsFillTelephoneFill} from 'react-icons/bs'
+import { CgMail } from 'react-icons/cg'
+import { FaCarSide } from 'react-icons/fa'
+import { FaRegAddressBook } from 'react-icons/fa'
+import { BiTimeFive } from 'react-icons/bi'
+import { BsFillTelephoneFill } from 'react-icons/bs'
 export const links = [
   {
     id: 1,
@@ -27,7 +27,7 @@ export const links = [
 export const services = [
   {
     id: 1,
-    icon: <CgMail/>,
+    icon: <CgMail />,
     title: 'motocar@gmail.com',
     text:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
@@ -41,7 +41,7 @@ export const services = [
   },
   {
     id: 3,
-    icon: <GiShakingHands/>,
+    icon: <GiShakingHands />,
     title: 'Customer satisfaction ',
     text:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
@@ -50,21 +50,21 @@ export const services = [
 export const aboutcontact = [
   {
     id: 1,
-    icon: <FaRegAddressBook/>,
+    icon: <FaRegAddressBook />,
     title: 'Address',
     text:
       'Green Street 22',
   },
   {
     id: 2,
-    icon: <BiTimeFive/>,
+    icon: <BiTimeFive />,
     title: 'work time',
     text:
       'Monday-Saturday: 08:00-18:00',
   },
   {
     id: 3,
-    icon: <BsFillTelephoneFill/>,
+    icon: <BsFillTelephoneFill />,
     title: 'Contact number',
     text:
       '+384 06657383929   +382 052 345 543',
@@ -72,10 +72,6 @@ export const aboutcontact = [
 ]
 
 
-
-//export const products_url = 'https://serv-react-api.netlify.app/api/3-z-complete'
-
-//export const single_product_url = `https://serv-react-api.netlify.app/api/3-z-complete?id=`
 
 
 

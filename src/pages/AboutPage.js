@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PageHero,MapLoc,Contact ,AbCon} from '../components'
+import { PageHero,MapLoc,Contact } from '../components'
 const AboutPage = () => {
  return (
   <main>
@@ -8,7 +8,7 @@ const AboutPage = () => {
     
   
        <MapLoc/>
-          <AbCon/>
+        
      <Contact/>
      
     
